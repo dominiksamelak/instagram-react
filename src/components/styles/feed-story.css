@@ -1,0 +1,30 @@
+.stories-avatar {
+  width: 64px;
+  margin-top: 14px;
+  margin-right: 16px;
+}
+
+.stories-circle {
+  position: relative;
+  width: 66px;
+  margin-top: -64px;
+  margin-left: -4px;
+}
+
+.stories-circle-username {
+  position: absolute;
+  width: 64px;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+  font-weight: 500;
+}
+
+.stories-circle .circle {
+  width: 64px;
+}
+
+.stories-avatar .avatar {
+  width: 56px;
+  border-radius: 75px;
+}

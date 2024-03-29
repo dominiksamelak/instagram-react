@@ -1,0 +1,10 @@
+.feed {
+  width: 460px;
+  margin-right: 70px;
+  /* display: flex; */
+}
+.feed-stories {
+  display: flex;
+}
+
+

@@ -1,0 +1,153 @@
+.feed-user-avatar,
+.feed-user-name-style,
+.feed-user-post-info,
+.main-feed-likecounter,
+.main-feed-translation,
+.main-feed-comments,
+.main-feed-username .name,
+.more,
+.feed-more,
+.like,
+.comment,
+.messages,
+.bookmark {
+  cursor: pointer;
+}
+
+.main-feed-user {
+  margin-top: 53px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 4px;
+}
+
+.feed-user {
+  margin-left: 10px;
+}
+
+.feed-user-post-info {
+  font-size: 12px;
+  color: gray;
+  font-weight: 500;
+}
+
+.feed-user-name {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4px;
+}
+
+.feed-user-name-style {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.feed-user-name-time {
+  margin-left: 4px;
+  font-size: 13px;
+  color: gray;
+}
+
+.feed-user-avatar .avatar {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.feed-more {
+  margin-left: auto;
+}
+
+.main-feed-pic {
+  margin-top: 10px;
+}
+
+.main-feed-icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.main-feed-icons .comment,
+.like,
+.messages {
+  margin-right: 15px;
+}
+
+.main-feed-icons .bookmark {
+  margin-left: auto;
+}
+
+.main-feed-likecounter {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+.main-feed-username {
+  display: flex;
+  flex: row;
+  margin-top: 10px;
+}
+
+.main-feed-username .name,
+.info,
+.more {
+  font-size: 13px;
+  margin-right: 4px;
+}
+
+.main-feed-username .name {
+  font-weight: bold;
+}
+
+.main-feed-username .more {
+  color: gray;
+  margin-left: auto;
+}
+
+.feed-more:hover {
+  opacity: 0.5;
+}
+
+.main-feed-translation {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.main-feed-comments {
+  font-size: 13px;
+  color: gray;
+  margin-top: 10px;
+}
+
+.main-feed-usercomment {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.addcomment .comment {
+  border-width: 0;
+  margin-left: -2px;
+}
+
+.emoji {
+  margin-left: auto;
+}
+
+.main-feed-post-border {
+  margin-top: 16px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.like:hover,
+.comment:hover,
+.messages:hover,
+.bookmark:hover,
+.emoji:hover {
+  opacity: 0.5;
+}
