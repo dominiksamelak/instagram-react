@@ -14,7 +14,7 @@ function App() {
       </div>
       <div className='feed-container'>
         <Feed />
-        <RightSidebar />
+        {/* <RightSidebar /> */}
       </div>
 
     </div>

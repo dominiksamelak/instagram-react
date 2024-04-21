@@ -3,20 +3,29 @@ import './styles/feed.css';
 import data from './FeedData.js'
 import FeedStory from './FeedStory.js';
 import FeedPosts from './FeedPosts.js';
+import RightSidebar from './RightSidebar.js'
+import RightSidebarPropositions from './RightSidebarPropositions.js';
 
 const Feed = () => {
   return (
-    <div className="feed">
-      <div className='feed-stories'>
-        {data.map(post => (
-          <FeedStory key={post.username} post={post} />
-        ))}
-      </div>
-
-      {data.map(post => (
-        <FeedPosts key={post.username} post={post} />
-      ))}
+    <div className="feed-container">
+      <div className='feed'>
+        <div className='feed-stories'>
+          {data.map(post => (
+            <FeedStory key={post.username} post={post} />
+          ))}
+        </div>
+        <div className='feed=posts'>
+          {data.map(post => (
+            <FeedPosts key={post.username} post={post} />
+          ))}
+        </div>
+        </div>        
+        <div className='right-sidebar'>
+          <RightSidebar/>
+        </div>
     </div>   
+
 
   );
 }

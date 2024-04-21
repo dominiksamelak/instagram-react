@@ -1,4 +1,3 @@
-import { isDOMComponent } from 'react-dom/test-utils';
 import jarek from './img/feed-avatars/jarek.jpg';
 import shakiraFeed from './img/feed-posts/shakira.png';
 import kaczor from './img/feed-avatars/kaczor.jpg'
@@ -23,5 +22,7 @@ const data = [
     postText: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
 ];
+
+
 
 export default data;
