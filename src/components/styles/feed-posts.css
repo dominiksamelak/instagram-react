@@ -3,7 +3,6 @@
 .feed-user-post-info,
 .main-feed-likecounter,
 .main-feed-translation,
-.main-feed-comments,
 .main-feed-username .name,
 .more,
 .feed-more,
@@ -151,3 +150,21 @@
 .emoji:hover {
   opacity: 0.5;
 }
+
+.comment-username {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comment-username:hover{
+  color: gray;
+}
+
+.comment-show:hover {
+  cursor: pointer;
+}
+
+/* .comment-show {
+  display: none;
+} */

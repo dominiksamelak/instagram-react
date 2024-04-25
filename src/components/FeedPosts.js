@@ -15,6 +15,30 @@ function FeedPosts({ post }) {
   const [likeSrc, setLikeSrc] = useState(likeFeed)
   const [showFullText, setShowFullText] = useState(false);
   const [commentCounter, setCommentCounter] = useState(0)
+  const [enteredTexts, setEnteredTexts] = useState([]);
+  const [inputText, setInputText] = useState('');
+  const [showAllComments, setShowAllComments] = useState(false);
+
+  const handleShowAllComments = () => {
+    setShowAllComments(true);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      // setIsEnterPressed(true);
+      setEnteredTexts([...enteredTexts, inputText]);
+      setInputText('');
+      setCommentCounter(commentCounter + 1)
+      console.log(enteredTexts)
+    }
+  };
+
+
+  const handleInputChange = (event) => {
+    setInputText(event.target.value);
+    // setIsEnterPressed(false); // Reset flag when input changes
+  };
+
   const incrementLikeCount = () => {
     if(likeCount === 0){
       setLikeCount(likeCount + 1);
@@ -64,9 +88,43 @@ function FeedPosts({ post }) {
           
         </div>
         <div className="main-feed-translation">Zobacz tłumaczenie</div>
-        <div className="main-feed-comments">Zobacz wszystkie komentarze: {commentCounter}</div>
+        <div className="main-feed-comments">
+        {commentCounter > 1 ? (
+          <>
+            <span className='comment-show' onClick={handleShowAllComments}>Zobacz wszystkie komentarze: {commentCounter}</span>
+            {!showAllComments && (
+              <p key={enteredTexts.length - 1}>
+                <span className='comment-username'>don_harryds </span>
+                <span className='comment-text'>{enteredTexts[enteredTexts.length - 1]}</span>
+              </p>
+            )}
+            {showAllComments &&
+              enteredTexts.map((text, index) => (
+                <p key={index}>
+                  <span className='comment-username'>don_harryds </span>
+                  <span className='comment-text'>{text}</span>
+                </p>
+              ))}
+          </>
+        ) : (
+          enteredTexts.map((text, index) => (
+            <p key={index}>
+              <span className='comment-username'>don_harryds </span>
+              <span className='comment-text'>{text}</span>
+            </p>
+          ))
+        )}
+      </div>   
         <div className="main-feed-usercomment">
-          <div className="addcomment"><input className="comment" type="text" placeholder="Dodaj komentarz..." /></div>
+          <div className="addcomment"><input 
+          className="comment" 
+          type="text" 
+          value={inputText}
+          onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
+          placeholder="Dodaj komentarz..." />
+
+          </div>
           <div className="emoji">
             <img className="emoji" src={emojiFeed} alt="Emoji" />
           </div>
@@ -77,3 +135,4 @@ function FeedPosts({ post }) {
   }
 
 export default FeedPosts;
+
