@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import BottomSidebar from './components/BottomSidebar';
 import LeftSidebar from './components/LeftSidebar';
 import Feed from './components/Feed';
-import Story from './components/Story';
+import Story from './components/Story'; 
 import RightSidebar from './components/RightSidebar';
-import './App.css';
+import './app.css'
 
 function App() {
   const [showStory, setShowStory] = useState(false);
@@ -14,16 +14,14 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      {showStory ? (
-        <Story toggleStory={toggleStory} />
-      ) : (
+    <div className='app-container'>
+      {showStory ? <Story toggleStory={toggleStory}/> : (
         <>
-          <div className="left-sidebar">
-            <LeftSidebar />
+          <div className='left-sidebar'>
+            <LeftSidebar  />
           </div>
-          <div className="feed-container">
-            <Feed toggleStory={toggleStory} />
+          <div className='feed-container'>``
+            <Feed toggleStory={toggleStory}/>
           </div>
           {/* <BottomSidebar /> */}
         </>
