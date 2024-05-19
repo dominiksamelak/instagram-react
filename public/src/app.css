@@ -1,0 +1,20 @@
+.app-container {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+}
+
+.feed-container {
+  display: flex;
+  justify-content: center;
+  /* transform: translate(-50%, 0%); */
+  /* top: 50%; Position the top of the div 50% down from the top of the viewport */
+  left: 50%; /* Position the left side of the div 50% from the left of the viewport */
+  transform: translate(-35%, -0%);
+  position: absolute;
+}
+
+.left-sidebar {
+
+
+}

@@ -1,0 +1,178 @@
+.right-bar {
+  width: 320px;
+  margin-top: 4px;
+  margin-left: 60px;
+}
+.my-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.my-profile-avatar .left-sidebar-icon {
+  width: 56px;
+}
+
+.my-profile-avatar:hover {
+  cursor: pointer;
+}
+
+.name-plus-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.my-profile-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+  margin-right: 16px;
+  flex: 80%;
+}
+
+.my-profile-nick {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.my-profile-fullname {
+  font-size: 13px;
+  color: gray;
+  margin-top: 2px;
+}
+
+.my-profile-fullname:hover {
+  cursor: pointer;
+}
+
+.my-profile-switch {
+  color: rgb(17, 133, 228);
+  font-weight: bold;
+  font-size: 12px;
+  flex: 20%;
+}
+
+.my-profile-switch:hover {
+  cursor: pointer;
+  color: rgb(11, 76, 129);
+}
+
+.right-bar-propositions-text {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4px;
+  width: 100%;
+  align-items: center;
+}
+.propositions-forme {
+  flex: 60%;
+  font-size: 13px;
+  color: gray;
+  font-weight: 600;
+}
+
+.propositions-seeall {
+  flex: 40%;
+  font-size: 11px;
+  text-align: right;
+  color: rgb(49, 49, 49);
+  font-weight: bold;
+}
+
+.propositions-seeall:hover {
+  cursor: pointer;
+  color: rgb(196, 196, 196);
+}
+
+.propositions-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+}
+
+.propositions-user-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.propositions-picture {
+  width: 32px;
+  margin-left: 4px;
+  border-radius: 16px;
+}
+
+.propositions-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  flex: 80%;
+}
+
+.propositions-nick:hover,
+.propositions-picture:hover {
+  cursor: pointer;
+}
+
+.propositions-follow {
+  color: rgb(17, 133, 228);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.propositions-follow:hover {
+  cursor: pointer;
+  color: rgb(11, 76, 129);
+}
+
+.propositions-followed {
+  font-size: 12px;
+  color: gray;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.propositions-nick {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.right-bar-info {
+  font-size: 11px;
+  color: gray;
+  font-weight: 400;
+  margin-top: 23px;
+  display: flex;
+  line-height: 18px;
+  flex-direction: row;
+  width: 320px;
+  flex-wrap: wrap;
+}
+
+.right-bar-info-option {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.right-bar-info-option:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.right-bar-instagram {
+  font-size: 11px;
+  color: gray;
+  font-weight: 400;
+  margin-top: 21px;
+  display: block;
+}

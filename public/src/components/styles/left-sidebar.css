@@ -1,0 +1,54 @@
+.left-sidebar {
+  margin-left: 15px;
+  border-right: 1px inset gray;
+  background-color: white;
+  width: 310px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+}
+
+.logo-sidebar {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.logo-sidebar:hover {
+  cursor: pointer;
+}
+
+.main-page-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-option,
+.menu-option-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.menu-option:hover,
+.menu-option-bottom:hover {
+  cursor: pointer;
+}
+
+.menu-option-bottom {
+  margin-bottom: 30px;
+  bottom: 0;
+  position: fixed;
+}
+.left-sidebar-icon {
+  width: 22px;
+}
+
+.left-sidebar-option {
+  padding-left: 13px;
+  font-size: 16x;
+}
+
