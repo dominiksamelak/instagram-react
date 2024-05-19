@@ -5,17 +5,22 @@ import './styles/story.css';
 import exit from './img/icons/exit.png';
 
 function Story({ toggleStory }) {
+  console.log('RENDER');
   useEffect(() => {
-    const progressBar = document.getElementById('progress-bar');
+    console.log('use effect');
     let width = 0;
-    const interval = setInterval(() => {
-      width += 20; 
+    const intervalFn = () => {
+      const progressBar = document.getElementById('progress-bar');
+      width += 20;
+      console.log({ width });
       progressBar.style.width = width + '%';
       if (width >= 120) {
-        clearInterval(interval);
         toggleStory();
       }
-    }, 1000);
+    };
+    setTimeout(intervalFn, 10);
+    console.log('after 1st invoke', width);
+    const interval = setInterval(intervalFn, 1000);
 
     return () => clearInterval(interval);
   }, [toggleStory]);
@@ -25,22 +30,22 @@ function Story({ toggleStory }) {
   }
 
   return (
-    <div className='story-container'>
-      <div className='story-top'>
-        <div className='story-progress'>
-          <div id='progress-bar'></div>
+    <div className="story-container">
+      <div className="story-top">
+        <div className="story-progress">
+          <div id="progress-bar"></div>
         </div>
-        <div className='story-top-info'>
+        <div className="story-top-info">
           {/* Listen to click event on the avatar */}
-          <img className='story-avatar' src={jarekAvatar} alt='avatar' />
-          <span className='story-username'>jarek</span>
+          <img className="story-avatar" src={jarekAvatar} alt="avatar" />
+          <span className="story-username">jarek</span>
         </div>
-        <div className='story-exit' onClick={handleExitClick}>
-          <img className='exit-button' src={exit} alt="Exit" />
+        <div className="story-exit" onClick={handleExitClick}>
+          <img className="exit-button" src={exit} alt="Exit" />
         </div>
       </div>
-      <div className='story-pic'>
-        <img className='story-pic-img' src={shakiraFeed} alt='story' />
+      <div className="story-pic">
+        <img className="story-pic-img" src={shakiraFeed} alt="story" />
       </div>
     </div>
   );
