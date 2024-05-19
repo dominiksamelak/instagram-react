@@ -5,21 +5,17 @@ import './styles/story.css';
 import exit from './img/icons/exit.png';
 
 function Story({ toggleStory }) {
-  console.log('RENDER');
   useEffect(() => {
-    console.log('use effect');
     let width = 0;
     const intervalFn = () => {
       const progressBar = document.getElementById('progress-bar');
       width += 20;
-      console.log({ width });
       progressBar.style.width = width + '%';
       if (width >= 120) {
         toggleStory();
       }
     };
-    setTimeout(intervalFn, 10);
-    console.log('after 1st invoke', width);
+    requestAnimationFrame(intervalFn);
     const interval = setInterval(intervalFn, 1000);
 
     return () => clearInterval(interval);
